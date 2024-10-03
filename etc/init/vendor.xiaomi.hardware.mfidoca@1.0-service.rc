@@ -1,0 +1,6 @@
+service vendor.mfidoca /vendor/bin/fidoca
+    class hal
+    user system
+    group system
+on property:vold.decrypt=trigger_restart_framework
+    start fidoca

@@ -1,0 +1,2 @@
+import odm/etc/boardid_property/${ro.boot.board_id}.prop
+ro.logd.size=2M

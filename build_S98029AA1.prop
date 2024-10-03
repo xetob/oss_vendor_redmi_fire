@@ -1,0 +1,10 @@
+
+ro.product.vendor.brand=Redmi
+ro.product.vendor.name=heat_eea
+ro.product.vendor.device=heat
+ro.vendor.build.fingerprint=Redmi/heat_eea/heat:14/UP1A.231005.007/V816.0.9.0.UMXEUXM:user/release-keys
+ro.product.vendor.marketname=Redmi 12
+ro.product.vendor.model=23053RN02Y
+ro.product.board=heat
+ro.bootimage.build.fingerprint=Redmi/heat_eea/heat:14/UP1A.231005.007/V816.0.9.0.UMXEUXM:user/release-keys
+

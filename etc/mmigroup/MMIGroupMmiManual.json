@@ -1,0 +1,25 @@
+{
+  "itemConfig": [
+    {
+      "showName": "SimCard_HotPlug"
+    },
+    {
+      "showName": "Sdcard_Intent"
+    },
+    {
+      "showName": "LCD",
+      "paramconfig": {
+        "auto_switch": false,
+        "switch_lcd_mode": true,
+        "lcd_pic": [
+          "4_W255=2000",
+          "1_R255=2000",
+          "2_G255=2000",
+          "3_B255=2000",
+          "7-EdgeWhite=2000",
+          "6_W00=2000"
+        ]
+      }
+    }
+  ]
+}

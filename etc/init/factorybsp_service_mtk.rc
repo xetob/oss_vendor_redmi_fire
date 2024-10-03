@@ -1,0 +1,40 @@
+service interfaces.factoryInterface@1.0-service /vendor/bin/hw/interfaces.factoryInterface@1.0-service
+    class late_start
+    user system
+    group root system sdcard_rw sdcard_r media_rw oem_2901 radio camera wifi
+    seclabel u:r:factory_services:s0
+
+service muxreport.close /vendor/bin/muxreport 3
+    class core
+    user radio
+    group radio cache inet misc
+    disabled
+    oneshot
+    seclabel u:r:muxreport:s0
+
+
+service muxreport.open /vendor/bin/muxreport 4
+    class core
+    user radio
+    group radio cache inet misc
+    disabled
+    oneshot
+    seclabel u:r:muxreport:s0
+
+on property:ro.factory_mode=0
+    setprop persist.vendor.factory.disable.acm true
+
+on property:ro.factory_mode=1
+    chmod 0664 /sys/kernel/debug/mtk_rtc/mtk_rtc
+    chmod 0660 /dev/block/mmcblk0p52
+
+on property:ro.factory_mode=1 && property:vendor.factory.start_gsort=start
+    exec u:r:su:s0 -- /vendor/bin/start_gsort.sh
+    setprop vendor.factory.start_gsort done
+
+on property:ro.factory_mode=1 && property:vendor.factory.wlan.set_mcr=start
+    exec u:r:su:s0 -- /vendor/bin/iwpriv wlan0 set_mcr 2011 2011
+    setprop vendor.factory.wlan.set_mcr done
+
+on property:ro.factory_mode=1 && property:vendor.factory.ddr_tool.runtime=*
+    exec u:r:su:s0 -- /vendor/bin/ddr_tool --run --time=${vendor.factory.ddr_tool.runtime}

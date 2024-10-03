@@ -1,0 +1,19 @@
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on property:ro.boot.board_id=S98029AA1
+    start vendor.nfc_hal_service
+    setprop ro.vendor.se.type HCE,UICC
+    setprop ro.vendor.nfc.repair 1
+
+on property:ro.boot.board_id=S98029BA1
+    start vendor.nfc_hal_service
+    setprop ro.vendor.se.type HCE,UICC
+    setprop ro.vendor.nfc.repair 1
+
+on property:ro.boot.board_id=TBD
+    start vendor.nfc_hal_service
+

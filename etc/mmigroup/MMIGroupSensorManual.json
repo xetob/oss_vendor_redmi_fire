@@ -1,0 +1,31 @@
+{
+  "itemConfig": [
+    {
+      "showName": "Accelerometer"
+    },
+    {
+      "showName": "Optical"
+    },
+    {
+      "showName": "Proximity"
+    },
+    {
+      "showName": "Gyroscope"
+    },
+    {
+      "showName": "Magnetic"
+    },
+    {
+      "showName": "Hall"
+    },
+    {
+      "showName": "NFC"
+    },
+    {
+      "showName": "Temperature"
+    },
+    {
+      "showName": "fingerprint"
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+device: fire
+enableShutdownFunc: true
+showCenterInfo: false
+
+positions:
+  important_info:
+    size: 150
+    x: 10
+    y: 10
+  expand_info:
+    size: 150
+
+import_info:
+  # PCB SN
+  - type: property
+    name: pcb_sn
+    key_name: a
+    command: ro.ril.oem.sno
+
+  # Battery level
+  - type: battery
+    name: battery_level
+    key_name: b
+
+  # MEID, if the phone supports CDMA, it must have the value
+  - type: telephony
+    name: meid
+    key_name: g
+
+  # Factory ID
+  - type: property
+    name: factory_id
+    key_name: o
+    command: ro.vendor.ril.factory_id
+
+  # Software version
+  - type: software_version
+    name: software_version
+    key_name: v
+
+check_info:
+  # Secure boot status
+  - type: property
+    name: secure_boot
+    key_name: a
+    command: ro.boot.secureboot
+    pass_value: 1
+
+  # Whether the bootloader lock is locked
+  - type: property
+    name: bootloader_lock
+    key_name: b
+    command: ro.boot.verifiedbootstate
+    pass_value: green
+
+  # RPMP provision
+  - type: property
+    name: rpmp
+    key_name: c
+    command: vendor.sys.rpmb_state
+    pass_value: 22
+
+  # Hardware version
+  - type: property
+    name: hardware_version
+    key_name: m
+    command: ro.boot.hwlevel
+    pass_value: MP
+
+  # Camera calibrate status check
+  - type: property
+    name: camera_calibrate
+    key_name: u
+    command: persist.vendor.camera.mi.dualcal.state
+    pass_value: 0
+
+  # Debug policy
+  - type: property
+    name: debug_policy
+    key_name: l
+    command: ro.boot.dp
+    pass_value: "0x20"
+
+  # Security Key: FIDO
+  - type: security
+    name: fido
+    key_name: h
+
+  # Security Key: IFAA
+  - type: security
+    name: ifaa
+    key_name: g
+
+  # Digital rights management key: Widevine
+  - type: security
+    name: widevine
+    key_name: q
+
+  # Android Key box, services for DRM(Digital Rights Management)
+  - type: security
+    name: key_box
+    key_name: t
+
+  # Airplane mode check
+  - type: modem
+    name: airplane_mode
+    key_name: Y
+    command: settings get global airplane_mode_on
+    pass_value: 0
+
+
+  # NFC function check
+  - type: nfc
+    name: nfc
+    key_name: B
+
+  # Check for residual test pictures
+  - type: picture
+    name: picture
+    key_name: p
+
+  # Sdcard status check
+  - type: sdcard
+    name: sdcard
+    key_name: v
+
+  # SIM card status
+  - type: property
+    name: sim_card
+    key_name: o
+    command: gsm.sim.state
+    pass_value: ABSENT,ABSENT
+
+
+  # SIM Tray
+  - type: file
+    name: sim_tray
+    key_name: s
+    command: /sys/devices/platform/simtray/status
+    pass_value: 1
+
+  # recovery apps absence
+  - type: recovery
+    name: 1217
+    key_name: G
+
+  # WifiScan
+  - type: wifi_scan
+    name: wifi_scan
+    key_name: G
+
+  # 小米账号残留
+  - type: account
+    name: mi_account
+    key_name: T
+
+  # shipmode
+  - type: ship_mode
+    name: ship_mode
+    key_name: K
+
+expand_info:
+  # Phone SN
+  - type: property
+    name: phone_sn
+    key_name: c
+    command: ro.ril.oem.psno
+
+  # System image version
+  - type: property
+    name: version
+    key_name: d
+    command: ro.build.version.incremental
+
+  # IMEI1
+  - type: telephony
+    name: imei1
+    key_name: e
+
+  # IMEI2
+  - type: telephony
+    name: imei2
+    key_name: f
+
+  # Bluetooth address
+  - type: property
+    name: bluetooth_address
+    key_name: h
+    command: ro.vendor.ril.oem.btmac
+
+  # WiFi address
+  - type: property
+    name: wifi_address
+    key_name: i
+    command: ro.vendor.ril.oem.wifimac
+
+  # CPU id
+  - type: property
+    name: cpu_id
+    key_name: k
+    command: ro.boot.cpuid
+
+  # Storage id
+  - type: storage
+    name: storage_id
+    key_name: l
+    params:
+      storage_id_path: /sys/class/block/mmcblk0/device/serial
+
+  # tzProvision
+  - type: security
+    name: tz_key
+    key_name: m
+
+  # Hardware version
+  - type: property
+    name: hardware_version
+    key_name: n
+    command: ro.boot.hwversion
+
+  # Maximum CPU frequency
+  - type: cpu_frequency
+    name: cpu_frequency
+    key_name: p
+    params:
+      core_number: 8
+      useHz: true
+
+  # Memory size
+  - type: storage
+    name: memory_size
+    key_name: q
+
+  # Storage size
+  - type: storage
+    name: storage_size
+    key_name: r
+
+  # Project code
+  - type: code_name
+    name: code_name
+    key_name: s
+    params:
+      23053RN02A: M19A
+      23053RN02I: M19A
+      23053RN02L: M19L
+      23053RN02Y: M19E
+       
+  # MIUI cust image version
+  # Optional
+  - type: property
+    name: cust_version
+    key_name: T
+    command: ro.miui.business.version
+

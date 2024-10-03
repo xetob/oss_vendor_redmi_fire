@@ -1,0 +1,8 @@
+service vendor.mtdservice-1-3 /vendor/bin/mtd@1.3
+    class hal
+    group system keystore drmrpc
+    disabled
+
+on property:sys.boot_completed=1
+    start vendor.mtdservice-1-3
+
