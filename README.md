@@ -18,5 +18,3 @@ Flash Custom vbmeta (fastboot flash vbmeta vbmeta_patched.img)
 Flash vendor (fastboot flash vendor vendor.img)
 
 Format data and reboot
-
-if you want to change something yourself just unpack it 
