@@ -1,0 +1,252 @@
+{
+  "mmigroupConfig": {
+    "hideDiskMountUi": true
+  },
+  "systemConfig": {
+    "Attestation": false,
+    "Widewine": false,
+    "IFAA_Version": false,
+    "FIDO_Version": false
+  },
+  "itemConfig": [
+    {
+      "showName": "VersionInfo",
+      "paramconfig": {
+        "AddInfo": {
+          "CPUID": "any",
+          "BuildNumber": "any",
+          "BaseBandVersion": "any",
+          "KernelVersion": "any",
+          "System_Verity": "true"
+        }
+      }
+    },
+    {
+      "showName": "SimCard_HotPlug"
+    },
+    {
+      "showName": "Sdcard_Intent"
+    },
+    {
+      "showName": "KeyPad",
+      "paramconfig": {
+        "keyCode": [
+          "VOLUME_UP",
+          "VOLUME_DOWN",
+          "POWER"
+        ]
+      }
+    },
+	{
+      "showName": "TpOpenShort"
+    },
+    {
+      "showName": "LCD",
+      "paramconfig": {
+        "auto_switch": false,
+        "support_next_button": false,
+        "lcd_pic": [
+          "3_B255=2000",
+          "2_G255=2000",
+          "1_R255=2000"
+        ]
+      }
+    },
+    {
+      "showName": "TouchScreen",
+      "paramconfig": {
+        "support_finger_track": false,
+        "support_random_draw": true,
+        "draw_path_width": 120,
+        "draw_rect_height": 110
+      }
+    },
+    {
+      "showName": "LightTEST",
+      "paramconfig": {
+        "Light": [
+          {
+            "type": "flashlight",
+            "name": "MainFlashlight",
+            "id": 0,
+            "method": 1
+          },
+          {
+            "type": "backlight",
+            "name": "Backlight",
+            "brightness": [
+              10,
+              128,
+              255
+            ]
+          },
+          {
+            "type": "infraredled",
+            "name": "InfraredLed",
+            "id": 0
+          }
+        ]
+      }
+    },
+    {
+      "showName": "MainCamera"
+    },
+    {
+      "showName": "WideCamera"
+    },
+    {
+      "showName": "MacroCamera"
+    },
+    {
+      "showName": "FrontCamera"
+    },
+    {
+      "showName": "Charge",
+      "paramconfig": {
+        "is_miui_battery": false,
+        "support_afc_charge": false,
+        "check_usb_is_unplug": true,
+        "is_show_batteryTemperature": true,
+        "support_typec_check": true,
+        "Voltage": {
+          "min": 2500,
+          "max": 4550
+        },
+        "temp": {
+          "min": -20,
+          "max": 800
+        },
+        "ChargerVoltage": {
+          "min": 4600,
+          "max": 4600
+        },
+        "ChargerCurrent": {
+          "min": 1000,
+          "max": 3600
+        },
+        "errorBatteryId": [
+          "Fail",
+          "NULL",
+          "Not found",
+          "Generic_Battery",
+          "BATTERY_NOT_DEFAULT"
+        ]
+      }
+    },
+    {
+      "showName": "WlanAP"
+    },
+    {
+      "showName": "WlanAddress"
+    },
+    {
+      "showName": "BluetoothDevice"
+    },
+    {
+      "showName": "BluetoothAddress"
+    },
+    {
+      "showName": "GPS"
+    },
+    {
+      "showName": "OTG",
+      "paramconfig": {
+        "support_udisk": true,
+        "is_show_storage": true,
+        "support_typec": true,
+        "support_mouse": true
+      }
+    },
+    {
+      "showName": "Magnetic"
+    },
+    {
+      "showName": "Accelerometer",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_axialresult": true,
+        "support_angle45": true,
+        "support_angleneg45": true,
+        "is_auto_calibrate": false,
+        "support_plus_or_minus_45_degrees_either_pass_through": false,
+        "autoTest": {
+          "support_calibrate": false
+        }
+      }
+    },
+    {
+      "showName": "Gyroscope",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_test": true,
+        "is_auto_calibrate": false
+      }
+    },
+    {
+      "showName": "Optical"
+    },
+    {
+      "showName": "Optical_Back"
+    },
+    {
+      "showName": "Proximity"
+    },
+    {
+      "showName": "Speaker"
+    },
+    {
+      "showName": "Receiver"
+    },
+    {
+      "showName": "MainMicToHeadPhone",
+      "paramconfig": {
+        "volume_rate": 0.6,
+        "loop_type": "manual_loop",
+        "hasHeadPhone": true,
+        "audioConfig": [
+          "mmitest=on;inputdevice=mainmic",
+          "mmitest=on;outputdevice=headphone"
+        ],
+        "markedWords": "mainmictoHeadphone_speakernotify"
+      }
+    },
+    {
+      "showName": "HeadSet"
+    },
+    {
+      "showName": "FM",
+      "action": "com.mmigroup.action.ThreeAppTest",
+      "support": true,
+      "automatic": false,
+      "paramconfig": {
+        "pkg": "com.miui.fm",
+        "cls": "com.miui.fmradio.FmRadioActivity",
+        "req_code":"961",
+        "testitem_name": "fm_test",
+        "result_passcode": "1",
+        "extra_info": {
+          "model_test": "true"
+        },
+        "auto_exit": false
+      }
+    },
+    {
+      "showName": "fingerprint"
+    },
+    {
+      "showName": "Vibrator",
+      "paramconfig": {
+        "is_auto_vibrate": false
+      }
+    },
+    {
+      "showName": "NFC"
+    },
+    {
+      "showName": "Sar",
+      "paramconfig": {
+        "support_angle45": true
+      }
+    }
+  ]
+}

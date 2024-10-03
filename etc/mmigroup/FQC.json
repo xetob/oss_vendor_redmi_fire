@@ -1,0 +1,125 @@
+{
+  "itemConfig": [
+    {
+      "showName": "VersionInfo"
+    },
+    {
+      "showName": "SimCard_HotPlug"
+    },
+    {
+      "showName": "Sdcard_Intent"
+    },
+    {
+      "showName": "KeyPad"
+    },
+	{
+      "showName": "TpOpenShort"
+    },
+    {
+      "showName": "LCD",
+      "paramconfig": {
+        "auto_switch": false
+      }
+    },
+    {
+      "showName": "LightTEST"
+    },
+    {
+      "showName": "TouchScreen"
+    },
+    {
+      "showName": "MainCamera"
+    },
+    {
+      "showName": "WideCamera"
+    },
+    {
+      "showName": "MacroCamera"
+    },
+    {
+      "showName": "FrontCamera"
+    },
+    {
+      "showName": "Charge"
+    },
+    {
+      "showName": "WlanAP"
+    },
+    {
+      "showName": "WlanAddress"
+    },
+    {
+      "showName": "BluetoothDevice"
+    },
+    {
+      "showName": "BluetoothAddress"
+    },
+    {
+      "showName": "GPS"
+    },
+    {
+      "showName": "OTG"
+    },
+    {
+      "showName": "Magnetic"
+    },
+    {
+      "showName": "Accelerometer",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_axialresult": true,
+        "support_angle45": true,
+        "support_angleneg45": true,
+        "is_auto_calibrate": false,
+        "support_plus_or_minus_45_degrees_either_pass_through": false,
+        "autoTest": {
+          "support_calibrate": false
+        }
+      }
+    },
+    {
+      "showName": "Gyroscope",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_test": true,
+        "is_auto_calibrate": false
+      }
+    },
+	{
+      "showName": "Optical"
+    },
+    {
+      "showName": "Proximity"
+    },
+    {
+      "showName": "Speaker"
+    },
+    {
+      "showName": "Receiver"
+    },
+    {
+      "showName": "MainMicToHeadPhone"
+    },
+    {
+      "showName": "HeadSet"
+    },
+    {
+      "showName": "FM"
+    },
+    {
+      "showName": "fingerprint"
+    },
+    {
+      "showName": "Vibrator",
+      "paramconfig": {
+        "is_auto_vibrate": false
+      }
+    },
+    {
+      "showName": "NFC"
+    },
+    {
+      "showName": "Sar"
+    }
+  ]
+}

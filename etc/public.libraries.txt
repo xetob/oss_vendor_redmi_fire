@@ -1,0 +1,24 @@
+libOpenCL.so
+#M19A add code at 23.01.29 start
+libmialgoengine.so 64
+libmialgoengine2.so 64
+libcom.xiaomi.pluginutils.so
+libarcsoft_beautyshot.so 64
+libalhLDC.so 64
+libarcsoft_portrait_lighting.so 64
+libarcsoft_portrait_lighting_c.so 64
+librelight_only.so 64
+libmialgo_utils.so 64
+libmialgo_aio_seg.so 64
+libMNN.so 64
+libmialgo_ai_vision.so 64
+libmiphone_capture_bokeh.so 64
+libarcsoft_dualcam_refocus_image.so 64
+libarcsoft_supernight.so 64
+libarcsoft_high_dynamic_range.so 64
+libarcsoft_low_light_hdr.so 64
+libarcsoft_supernight.so 64
+vendor.mediatek.hardware.camera.isphal@1.0.so 64
+vendor.mediatek.hardware.camera.atms@1.0.so 64
+#M19A add code at 23.01.29 end
+

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioParam version="1.2">
+  <ParamTree>
+    <Param path="Normal" param_id="0"/>
+    <Param path="3_pole_Headset" param_id="1"/>
+    <Param path="4_pole_Headset" param_id="1"/>
+    <Param path="5_pole_Headset" param_id="1"/>
+    <Param path="5_pole_Headset+ANC" param_id="1"/>
+    <Param path="Handsfree" param_id="1"/>
+    <Param path="BT_NREC_On_NB" param_id="2"/>
+    <Param path="BT_NREC_On_WB" param_id="2"/>
+    <Param path="BT_NREC_Off" param_id="2"/>
+    <Param path="MagiConference" param_id="0"/>
+    <Param path="HAC" param_id="1"/>
+    <Param path="Usb_Headset" param_id="2"/>
+    <Param path="Lpbk_Handset" param_id="2"/>
+    <Param path="Lpbk_Headset" param_id="2"/>
+    <Param path="Lpbk_Handsfree" param_id="2"/>
+    <Param path="Tty_HCO_Handset" param_id="2"/>
+    <Param path="Tty_VCO_Handset" param_id="2"/>
+    <Param path="Tty_HCO_Handsfree" param_id="2"/>
+    <Param path="Tty_VCO_Handsfree" param_id="2"/>
+    <Param path="Handset_SV" param_id="2"/>
+    <Param path="Handsfree_SV" param_id="2"/>
+    <Param path="Lpbk_Nodelay_Headset_Mic1" param_id="2"/>
+    <Param path="Lpbk_Nodelay_Headset_Mic2" param_id="2"/>
+    <Param path="Lpbk_Nodelay_Headset_Mic3" param_id="2"/>
+    <Param path="Normal,WCDMA" param_id="0"/>
+    <Param path="3_pole_Headset,WCDMA" param_id="1"/>
+    <Param path="4_pole_Headset,WCDMA" param_id="1"/>
+    <Param path="5_pole_Headset,WCDMA" param_id="1"/>
+    <Param path="5_pole_Headset+ANC,WCDMA" param_id="1"/>
+    <Param path="Handsfree,WCDMA" param_id="1"/>
+    <Param path="BT_Earphone,WCDMA" param_id="2"/>
+    <Param path="BT_NREC_Off,WCDMA" param_id="2"/>
+    <Param path="MagiConference,WCDMA" param_id="0"/>
+    <Param path="HAC,WCDMA" param_id="1"/>
+    <Param path="Usb_Headset,WCDMA" param_id="2"/>
+    <Param path="Lpbk_Handset,WCDMA" param_id="2"/>
+    <Param path="Lpbk_Headset,WCDMA" param_id="2"/>
+    <Param path="Lpbk_Handsfree,WCDMA" param_id="2"/>
+    <Param path="Tty_HCO_Handset,WCDMA" param_id="2"/>
+    <Param path="Tty_VCO_Handset,WCDMA" param_id="2"/>
+    <Param path="Tty_HCO_Handsfree,WCDMA" param_id="2"/>
+    <Param path="Tty_VCO_Handsfree,WCDMA" param_id="2"/>
+    <Param path="Handset_SV,WCDMA" param_id="2"/>
+    <Param path="Handsfree_SV,WCDMA" param_id="2"/>
+    <Param path="Normal,VoLTE" param_id="0"/>
+    <Param path="3_pole_Headset,VoLTE" param_id="1"/>
+    <Param path="4_pole_Headset,VoLTE" param_id="1"/>
+    <Param path="5_pole_Headset,VoLTE" param_id="1"/>
+    <Param path="5_pole_Headset+ANC,VoLTE" param_id="1"/>
+    <Param path="Handsfree,VoLTE" param_id="1"/>
+    <Param path="BT_Earphone,VoLTE" param_id="2"/>
+    <Param path="BT_NREC_Off,VoLTE" param_id="2"/>
+    <Param path="MagiConference,VoLTE" param_id="0"/>
+    <Param path="HAC,VoLTE" param_id="1"/>
+    <Param path="Usb_Headset,VoLTE" param_id="2"/>
+    <Param path="Lpbk_Handset,VoLTE" param_id="2"/>
+    <Param path="Lpbk_Headset,VoLTE" param_id="2"/>
+    <Param path="Lpbk_Handsfree,VoLTE" param_id="2"/>
+    <Param path="Tty_HCO_Handset,VoLTE" param_id="2"/>
+    <Param path="Tty_VCO_Handset,VoLTE" param_id="2"/>
+    <Param path="Tty_HCO_Handsfree,VoLTE" param_id="2"/>
+    <Param path="Tty_VCO_Handsfree,VoLTE" param_id="2"/>
+    <Param path="Handset_SV,VoLTE" param_id="2"/>
+    <Param path="Handsfree_SV,VoLTE" param_id="2"/>
+    <Param path="Normal,CDMA" param_id="0"/>
+    <Param path="3_pole_Headset,CDMA" param_id="1"/>
+    <Param path="4_pole_Headset,CDMA" param_id="1"/>
+    <Param path="5_pole_Headset,CDMA" param_id="1"/>
+    <Param path="5_pole_Headset+ANC,CDMA" param_id="1"/>
+    <Param path="Handsfree,CDMA" param_id="1"/>
+    <Param path="BT_Earphone,CDMA" param_id="2"/>
+    <Param path="BT_NREC_Off,CDMA" param_id="2"/>
+    <Param path="MagiConference,CDMA" param_id="0"/>
+    <Param path="HAC,CDMA" param_id="1"/>
+    <Param path="Usb_Headset,CDMA" param_id="2"/>
+    <Param path="Lpbk_Handset,CDMA" param_id="2"/>
+    <Param path="Lpbk_Headset,CDMA" param_id="2"/>
+    <Param path="Lpbk_Handsfree,CDMA" param_id="2"/>
+    <Param path="Tty_HCO_Handset,CDMA" param_id="2"/>
+    <Param path="Tty_VCO_Handset,CDMA" param_id="2"/>
+    <Param path="Tty_HCO_Handsfree,CDMA" param_id="2"/>
+    <Param path="Tty_VCO_Handsfree,CDMA" param_id="2"/>
+    <Param path="Handset_SV,CDMA" param_id="2"/>
+    <Param path="Handsfree_SV,CDMA" param_id="2"/>
+  </ParamTree>
+  <ParamUnitPool>
+    <ParamUnit param_id="0">
+      <Param name="DL FIR visibility" value="1"/>
+      <Param name="DL DRC+DG visibility" value="1"/>
+      <Param name="DL NR visibility" value="1"/>
+      <Param name="DL Digital Gain visibility" value="1"/>
+      <Param name="DL Limiter TH visibility" value="1"/>
+      <Param name="DL TASTE visibility" value="1"/>
+      <Param name="UL FIR visibility" value="1"/>
+      <Param name="UL DRC+DG visibility" value="1"/>
+      <Param name="UL NREC visibility" value="1"/>
+      <Param name="UL cal. visibility" value="1"/>
+      <Param name="UL Digital Gain visibility" value="1"/>
+      <Param name="UL Limiter TH visibility" value="1"/>
+      <Param name="UL AEC visibility" value="1"/>
+      <Param name="UL NLP visibility" value="1"/>
+      <Param name="UL ES LB visibility" value="1"/>
+      <Param name="UL AES LB visibility" value="1"/>
+    </ParamUnit>
+    <ParamUnit param_id="1">
+      <Param name="DL FIR visibility" value="1"/>
+      <Param name="DL DRC+DG visibility" value="1"/>
+      <Param name="DL NR visibility" value="1"/>
+      <Param name="DL Digital Gain visibility" value="1"/>
+      <Param name="DL Limiter TH visibility" value="1"/>
+      <Param name="DL TASTE visibility" value="1"/>
+      <Param name="UL FIR visibility" value="1"/>
+      <Param name="UL DRC+DG visibility" value="1"/>
+      <Param name="UL NREC visibility" value="1"/>
+      <Param name="UL cal. visibility" value="0"/>
+      <Param name="UL Digital Gain visibility" value="1"/>
+      <Param name="UL Limiter TH visibility" value="1"/>
+      <Param name="UL AEC visibility" value="1"/>
+      <Param name="UL NLP visibility" value="1"/>
+      <Param name="UL ES LB visibility" value="1"/>
+      <Param name="UL AES LB visibility" value="1"/>
+    </ParamUnit>
+    <ParamUnit param_id="2">
+      <Param name="DL FIR visibility" value="1"/>
+      <Param name="DL DRC+DG visibility" value="1"/>
+      <Param name="DL NR visibility" value="1"/>
+      <Param name="DL Digital Gain visibility" value="1"/>
+      <Param name="DL Limiter TH visibility" value="1"/>
+      <Param name="DL TASTE visibility" value="0"/>
+      <Param name="UL FIR visibility" value="1"/>
+      <Param name="UL DRC+DG visibility" value="1"/>
+      <Param name="UL NREC visibility" value="1"/>
+      <Param name="UL cal. visibility" value="0"/>
+      <Param name="UL Digital Gain visibility" value="1"/>
+      <Param name="UL Limiter TH visibility" value="1"/>
+      <Param name="UL AEC visibility" value="1"/>
+      <Param name="UL NLP visibility" value="1"/>
+      <Param name="UL ES LB visibility" value="1"/>
+      <Param name="UL AES LB visibility" value="1"/>
+    </ParamUnit>
+  </ParamUnitPool>
+</AudioParam>

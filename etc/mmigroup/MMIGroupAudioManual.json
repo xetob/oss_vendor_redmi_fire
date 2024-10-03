@@ -1,0 +1,153 @@
+{
+  "itemConfig": [
+    {
+      "showName": "Speaker",
+      "action": "com.mmigroup.action.audioloop.AUDIOPLAYER",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 1.0,
+        "is_show_list": true,
+        "audioConfig": [
+          "mmitest=on;outputdevice=speaker"
+        ],
+        "markedWords": "speaker_isMediaPlaying"
+      }
+    },
+    {
+      "showName": "Receiver",
+      "action": "com.mmigroup.action.audioloop.AUDIOPLAYER",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 1.0,
+        "is_show_list": true,
+        "audioConfig": [
+          "mmitest=on;outputdevice=receiver"
+        ],
+        "markedWords": "receiver_isMediaPlaying"
+      }
+    },
+    {
+      "showName": "MainMicToReceiver",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 1.0,
+        "loop_type": "manual_loop",
+        "audioConfig": [
+          "mmitest=on;inputdevice=mainmic;",
+          "mmitest=on;outputdevice=receiver"
+        ],
+        "markedWords": "mainmictoReceiver_speakernotify"
+      }
+    },
+    {
+      "showName": "MainMicToSpeaker",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 1.0,
+        "loop_type": "manual_loop1",
+        "audioConfig": [
+          "mmitest=on;inputdevice=mainmic",
+          "mmitest=on;outputdevice=speaker"
+        ],
+        "markedWords": "mainmictoSpeaker_speakernotify"
+      }
+    },
+    {
+      "showName": "SubMicToReceiver",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 1.0,
+        "loop_type": "manual_loop1",
+        "audioConfig": [
+          "mmitest=on;inputdevice=submic",
+          "mmitest=on;outputdevice=receiver"
+        ],
+        "markedWords": "submictoReceiver_speakernotify"
+      }
+    },
+    {
+      "showName": "SubMicToSpeaker",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 1.0,
+        "loop_type": "manual_loop1",
+        "audioConfig": [
+          "mmitest=on;inputdevice=submic",
+          "mmitest=on;outputdevice=speaker"
+        ],
+        "markedWords": "submictoSpeaker_speakernotify"
+      }
+    },
+    {
+      "showName": "HsMicToHeadPhone",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 0.5,
+        "loop_type": "manual_loop",
+        "hasHeadPhone": true,
+        "audioConfig": [
+          "mmitest=on;inputdevice=hsmic;",
+          "mmitest=on;outputdevice=headphone"
+        ],
+        "markedWords": "hsmictoheadphone_speakernotify"
+      }
+    },
+    {
+      "showName": "FM",
+      "action": "com.mmigroup.action.FM",
+      "support": true,
+      "support_autoTest_autopass": false,
+      "paramconfig": {
+        "volume_rate": 0.5
+      }
+    },
+    {
+      "showName": "MainMicToHeadPhone",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 0.5,
+        "loop_type": "manual_loop",
+        "hasHeadPhone": true,
+        "audioConfig": [
+          "mmitest=on;inputdevice=mainmic",
+          "mmitest=on;outputdevice=headphone"
+        ],
+        "markedWords": "mainmictoHeadphone_speakernotify"
+      }
+    },
+    {
+      "showName": "SubMicToHeadPhone",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 0.5,
+        "loop_type": "manual_loop",
+        "hasHeadPhone": true,
+        "audioConfig": [
+          "mmitest=on;inputdevice=submic;",
+          "mmitest=on;outputdevice=headphone"
+        ],
+        "markedWords": "submictoHeadphone_speakernotify"
+      }
+    },
+    {
+      "showName": "HeadSet",
+      "action": "com.mmigroup.action.HEADPHONE",
+      "support": true,
+      "paramconfig": {
+        "volume_rate": 0.5,
+        "keyCode": [
+          "VOLUME_UP",
+          "VOLUME_DOWN",
+          "HEADSETHOOK"
+        ]
+      }
+    }
+  ]
+}

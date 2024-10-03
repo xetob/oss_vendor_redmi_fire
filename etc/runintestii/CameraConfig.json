@@ -1,0 +1,192 @@
+{
+  "itemConfig": [
+    {
+      "Action": "com.factory.runintestii.gsensor",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Gsensor",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "interval": 1000
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.gyro",
+      "Support": false,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Gyro",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "interval": 1000
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.lightsensor",
+      "Support": true,
+      "S98019": {
+        "Support": false
+      },
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_lightsensor",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "interval": 1000
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.magnetic",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Magnetic",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "interval": 1000
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.proximity",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Proximity",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "interval": 1000
+      }
+    },
+	{
+      "Action": "com.factory.runintestii.pressure",
+      "Support": false,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Pressure",
+      "ParamOneCycle": 5,
+      "ParameOneCycleTime": "5000",
+      "Parameter": {
+        "interval": 1000
+      }
+    },
+	{
+      "Action": "com.factory.runintestii.speaker",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Speaker",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "volume_rate": 1
+      }
+    },
+	{
+      "Action": "com.factory.runintestii.submic",
+      "Support": false,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Submic",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "volume_rate": 1,
+        "volume_stander": 20
+      }
+    },
+	{
+      "Action": "com.factory.runintestii.mainmic",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Mainmic",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "volume_rate": 1,
+        "volume_stander": 20
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.cameraapi2test",
+      "Support": true,
+      "IsForeGround": true,
+      "RunAlone": false,
+      "Name": "camera_mainback",
+      "ParamOneCycle": 30,
+      "ParameOneCycleTime": "10000",
+      "Parameter": {
+        "istake_picture": true,
+        "support_flash": true,
+        "support_cameraCheck": true,
+        "support_cameraId": 0
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.cameraapi2test",
+      "Support": true,
+      "IsForeGround": true,
+      "RunAlone": false,
+      "Name": "camera_mainfront",
+      "ParamOneCycle": 30,
+      "ParameOneCycleTime": "10000",
+      "Parameter": {
+        "istake_picture": true,
+        "support_flash": false,
+        "support_cameraCheck": true,
+        "support_cameraId": 1
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.cameraapi2test",
+      "Support": true,
+      "IsForeGround": true,
+      "RunAlone": false,
+      "Name": "camera_Wide",
+      "ParamOneCycle": 30,
+      "ParameOneCycleTime": "10000",
+      "Parameter": {
+        "istake_picture": true,
+        "support_flash": false,
+        "support_cameraCheck": true,
+        "support_cameraId": 2
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.cameraapi2test",
+      "Support": true,
+      "IsForeGround": true,
+      "RunAlone": false,
+      "Name": "camera_Macro",
+      "ParamOneCycle": 30,
+      "ParameOneCycleTime": "10000",
+      "Parameter": {
+        "istake_picture": true,
+        "support_flash": false,
+        "support_cameraCheck": true,
+        "support_cameraId": 3
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.cameraapi2test",
+      "Support": false,
+      "IsForeGround": true,
+      "RunAlone": false,
+      "Name": "camera_DualBack",
+      "ParamOneCycle": 30,
+      "ParameOneCycleTime": "10000",
+      "Parameter": {
+        "istake_picture": true,
+        "support_flash": false,
+        "support_cameraCheck": false,
+        "support_cameraId": 4
+      }
+    }
+  ]
+}

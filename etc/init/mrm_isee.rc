@@ -1,0 +1,4 @@
+service vendor.mrmd /vendor/bin/mrmd_isee
+    class hal
+    user system
+    group system shell

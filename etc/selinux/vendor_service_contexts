@@ -1,0 +1,21 @@
+#line 1 "device/xiaomi/fire/nfc/sepolicy/service_contexts"
+# add for mi_nfc
+mi_nfc                                u:object_r:mi_nfc_service:s0
+#line 1 "device/mediatek/sepolicy/bsp/non_plat/service_contexts"
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+android.hardware.neuralnetworks.IDevice/mtk-gpu_shim    u:object_r:hal_neuralnetworks_service:s0
+android.hardware.neuralnetworks.IDevice/mtk-dsp_shim    u:object_r:hal_neuralnetworks_service:s0
+android.hardware.neuralnetworks.IDevice/mtk-mdla_shim   u:object_r:hal_neuralnetworks_service:s0
+android.hardware.neuralnetworks.IDevice/mtk-neuron_shim u:object_r:hal_neuralnetworks_service:s0
+#line 1 "vendor/xiaomi/proprietary/miriskmanager/sepolicy/service_contexts"
+
+# mrmd services
+vendor.xiaomi.hardware.mrm.IMrm/default            u:object_r:hal_mrm_service:s0
+vendor.xiaomi.hardware.mrm.IMiCertificate/default  u:object_r:hal_mrm_service:s0
+vendor.xiaomi.hardware.mrm.IMrmRemoteAuth/default  u:object_r:hal_mrm_service:s0
+#line 1 "vendor/xiaomi/proprietary/interfaces/displayfeature/1.0/sepolicy/service_contexts"
+# xiaomi Services
+DisplayFeatureControl                          u:object_r:DisplayFeatureControl_service:s0

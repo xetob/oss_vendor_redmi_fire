@@ -1,0 +1,42 @@
+on post-fs-data
+    exec rm -f /data/vendor/ipsec/wo
+    mkdir /data/vendor/ipsec 0770 system system
+    mkdir /data/vendor/ipsec/wo 0770 system system
+    mkdir /dev/vendor/net/ 0770 system system
+    chown system /data/vendor/ipsec/wo_apn.conf
+    chown system /data/vendor/ipsec/charon.ctl
+    chown system /data/vendor/ipsec/charon.pid
+    chown system /data/vendor/ipsec/starter.charon.pid
+    chmod 770 /data/vendor/ipsec/wo_apn.conf
+    chmod 770 /data/vendor/ipsec/charon.ctl
+    chmod 770 /data/vendor/ipsec/charon.pid
+    chmod 770 /data/vendor/ipsec/starter.charon.pid
+
+on property:vendor.volte_md_status=ready && property:persist.vendor.mtk_wfc_support=1
+    start vendor.epdg_wod
+
+on property:vendor.volte_md_status=reset
+    stop vendor.epdg_wod
+
+on property:vendor.volte_md_status=stop
+    stop vendor.epdg_wod
+
+on property:vendor.volte_md_status=flightmode
+    stop vendor.epdg_wod
+
+on property:vendor.volte_md_status=exception
+    stop vendor.epdg_wod
+
+# Trigger TRM when wod restart
+on property:ro.vendor.md_apps.load_type=user && property:init.svc.vendor.epdg_wod=restarting
+    setprop vendor.ril.mux.report.case 2
+    setprop vendor.ril.muxreport 1
+
+service vendor.epdg_wod /vendor/bin/epdg_wod
+    class late_start
+    socket wod_action stream 660 system system
+    socket wod_sim    stream 660 system system
+    user system
+    group system shell log inet radio net_admin
+    capabilities NET_RAW NET_ADMIN WAKE_ALARM CHOWN KILL NET_BIND_SERVICE
+    disabled

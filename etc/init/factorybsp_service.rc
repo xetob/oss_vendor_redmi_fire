@@ -1,0 +1,56 @@
+
+service create_factory_persist_file /vendor/bin/create_factory_persist_file
+    class late_start
+    user root
+    group system
+    seclabel u:r:factory_services:s0
+    oneshot
+
+service create_factory_efs_file /vendor/bin/create_factory_efs_file
+    class late_start
+    user root
+    group system
+    seclabel u:r:factory_services:s0
+    oneshot
+
+
+
+on post-fs-data
+    mkdir /data/vendor/fac_sources/ -p
+    chown system system /data/vendor/fac_sources
+    chmod 0777 /data/vendor/fac_sources
+
+
+service check_keymaster_factory /vendor/bin/check_keymaster
+    class main
+    user system
+    group system media mediadrm drmrpc
+    oneshot
+    disabled
+    seclabel u:r:check_keymaster:s0
+
+service check_keybox_factory /vendor/bin/check_keybox
+    class main
+    user system
+    group system media mediadrm drmrpc
+    oneshot
+    disabled
+    seclabel u:r:check_keybox:s0
+
+service delete_finger_file /system/bin/delete_finger_file
+    class core
+    user system
+    group system
+    oneshot
+    disabled
+    seclabel u:r:toolbox:s0
+
+on property:persist.vendor.factory.log.level=*
+    setprop persist.sys.factory.log.level ${persist.vendor.factory.log.level}
+
+on property:persist.vendor.factory.disable.acm=*
+    setprop persist.sys.factory.disable.acm ${persist.vendor.factory.disable.acm}
+
+
+on property:persist.sys.factory.ata_manual=*
+    setprop persist.vendor.sys.ata_manual ${persist.sys.factory.ata_manual}

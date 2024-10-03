@@ -1,0 +1,63 @@
+{
+  "itemConfig": [
+    {
+      "Action": "com.factory.runintestii.bluetooth",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "reboot_BlueTooth",
+      "ParamOneCycle": 2,
+      "ParameOneCycleTime": "",
+      "Parameter": {
+        "interval": 2000,
+        "wait_times": 30
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.gps",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "reboot_GPS",
+      "ParamOneCycle": 2,
+      "ParameOneCycleTime": "",
+      "Parameter": {
+        "interval": 2000,
+        "wait_times": 30
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.wlan",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "reboot_Wlan",
+      "ParamOneCycle": 2,
+      "ParameOneCycleTime": "",
+      "Parameter": {
+        "interval": 2000,
+        "wait_times": 30
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.subsystemreboot",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": true,
+      "Name": "reboot_subsystemreboot",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "",
+      "Parameter": {}
+    },
+    {
+      "Action": "com.factory.runintestii.autoreboot",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": true,
+      "Name": "reboot_Reboot",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "",
+      "Parameter": {}
+    }
+  ]
+}

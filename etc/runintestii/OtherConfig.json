@@ -1,0 +1,427 @@
+{
+  "CommonConfig": {
+    "rebootCycleNum": 15,
+    "softwareCycleNum": 1,
+    "cameraCycleNum": 1,
+    "otherCycleNum": 1
+  },
+  "CommonConstant": {
+    "global_config": {
+      "support_control_battery_level": false,
+      "support_ddr_sorting": true,
+      "RunInConfigPath": "vendor/etc",
+      "ReortPath": "data/anr",
+      "LogPath": "data/anr",
+      "SecretCodeName": "1397268451",
+      "is_run_on_xm": true,
+      "RuninReportPath": "/data/data/com.factory.runintestii/files/report.dat"
+    },
+    "global_battery_config": {
+      "HighBatterLevel": 60,
+      "LowBatterLevel": 50,
+      "RunInStartBatterLevel": 50,
+      "HighTemperatureLeve": 58,
+      "LowTemperatureLeve": -15,
+      "control_change_time": 0,
+      "before": {
+        "HighBatterLevel": 80,
+        "LowBatterLevel": 50,
+        "RunInStartBatterLevel": 40,
+        "HighTemperatureLeve": 55,
+        "LowTemperatureLeve": -15
+      },
+      "after": {
+        "HighBatterLevel": 80,
+        "LowBatterLevel": 50,
+        "RunInStartBatterLevel": 40,
+        "HighTemperatureLeve": 55,
+        "LowTemperatureLeve": -15
+      }
+    },
+    "pre_check_config": {
+      "IsEnterByApkMethod": false,
+      "Pre-stationsCheckFlag": [
+        {
+          "MMIGROUP_FLAG_MMIMANUAL": 1
+        },
+        {
+          "MMIGROUP_FLAG_MMIATA": 2,
+          "MMIGROUP_FLAG_MMIATAMANUAL": 11
+        },
+        {
+          "MMIGROUP_FLAG_MMIATA": 2,
+          "MMIGROUP_FLAG_MMIATAMANUAL2": 25
+        },
+        {
+          "MMIGROUP_FLAG_MMIATA": 2,
+          "MMIGROUP_FLAG_MMIATAMANUAL4": 24
+        }
+      ]
+    },
+    "stability_config": {
+      "StabilitySupport": true,
+      "StabilitySecretCode": "11"
+    },
+    "mainUi_config": {
+      "hours": [
+        2,
+        4,
+        6,
+        8,
+        12,
+        16,
+        24,
+        48,
+        991
+      ]
+    }
+  },
+  "itemConfig": [
+    {
+      "Action": "com.factory.runintestii.receiver",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "software_Receiver",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {
+        "volume_rate": 1
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.DDRToolTest",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "other_DDRTool",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1200000",
+      "Parameter": {}
+    },
+    {
+      "Action": "com.factory.runintestii.WIFITest",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": false,
+      "Name": "other_WIFITest",
+      "ParamOneCycle": 3,
+      "ParameOneCycleTime": "600000",
+      "Parameter": {
+        "iwprivTest": [
+          {
+            "mHQAName": "2.4G chain0 11b 11M ch1",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,1,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,0,3,38,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 6,
+            "TestRange": {
+              "min": 17,
+              "max": 21
+            }
+          },
+          {
+            "mHQAName": "2.4G chain0 11b 11M ch7",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,7,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,0,3,38,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 5,
+            "S98019": {
+              "nvLoss" : 4
+            },
+            "TestRange": {
+              "min": 17,
+              "max": 21
+            }
+          },
+          {
+            "mHQAName": "2.4G chain0 11b 11M ch13",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,13,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,0,3,38,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 6,
+            "S98019": {
+              "nvLoss" : 5
+            },
+            "TestRange": {
+              "min": 17,
+              "max": 21
+            }
+          },
+          {
+            "mHQAName": "2.4G chain0 11g 6M ch1",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,1,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,1,0,32,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 6,
+            "TestRange": {
+              "min": 14,
+              "max": 18
+            }
+          },
+          {
+            "mHQAName": "2.4G chain0 11g 6M ch7",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,7,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,1,0,32,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 5,
+            "S98019": {
+              "nvLoss" : 4
+            },
+            "TestRange": {
+              "min": 14,
+              "max": 18
+            }
+          },
+          {
+            "mHQAName": "2.4G chain0 11g 6M ch13",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,13,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,1,0,32,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 6,
+            "S98019": {
+              "nvLoss" : 5
+            },
+            "TestRange": {
+              "min": 14,
+              "max": 18
+            }
+          },
+          {
+            "mHQAName": "2.4G chain0 11n MCS0 ch1",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,1,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,2,0,30,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 6,
+            "TestRange": {
+              "min": 13,
+              "max": 17
+            }
+          },
+          {
+            "mHQAName": "2.4G chain0 11n MCS0 ch7",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,7,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,2,0,30,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 5,
+            "S98019": {
+              "nvLoss" : 4
+            },
+            "TestRange": {
+              "min": 13,
+              "max": 17
+            }
+          },
+          {
+            "mHQAName": "2.4G chain0 11n MCS0 ch13",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,13,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,2,0,30,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 6,
+            "S98019": {
+              "nvLoss" : 5
+            },
+            "TestRange": {
+              "min": 13,
+              "max": 17
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11a 6M ch36",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,36,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,1,0,38,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 3,
+            "TestRange": {
+              "min": 16.5,
+              "max": 21.5
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11a 6M ch100",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,100,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,1,0,38,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 2,
+            "S98019": {
+              "nvLoss" : 3
+            },
+
+            "TestRange": {
+              "min": 16.5,
+              "max": 21.5
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11a 6M ch165",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,165,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,1,0,38,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 2,
+            "S98019": {
+              "nvLoss" : 3
+            },
+            "TestRange": {
+              "min": 16.5,
+              "max": 21.5
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11n MCS0 ch36",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,36,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,2,0,28,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 3,
+            "TestRange": {
+              "min": 11.5,
+              "max": 16.5
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11n MCS0 ch100",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,100,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,2,0,28,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 2,
+            "S98019": {
+              "nvLoss" : 3
+            },
+            "TestRange": {
+              "min": 11.5,
+              "max": 16.5
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11n MCS0 ch165",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,165,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,2,0,28,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 2,
+            "S98019": {
+              "nvLoss" : 3
+            },
+            "TestRange": {
+              "min": 11.5,
+              "max": 16.5
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11ac MCS0 ch36",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,36,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,4,0,24,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 3,
+            "TestRange": {
+              "min": 9.5,
+              "max": 14.5
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11ac MCS0 ch100",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,100,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,4,0,24,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 2,
+            "S98019": {
+              "nvLoss" : 3
+            },
+            "TestRange": {
+              "min": 9.5,
+              "max": 14.5
+            }
+          },
+          {
+            "mHQAName": "5G chain0 11ac MCS0 ch165",
+            "HQACmdBandMode": "iwpriv wlan0 driver 'HQA SetBandMode=1,0'",
+            "HQACmdTxPath": "iwpriv wlan0 driver 'HQA SetTxPath=0,0'",
+            "HQACmdDBDCSetChannel": "iwpriv wlan0 driver 'HQA DBDCSetChannel=1,9,0,165,0,0,0,0,0,0,0'",
+            "HQACmdDBDCSetTXContent": "iwpriv wlan0 driver 'DBDCSetTXContent=2,11,0,0,0,0,2,1023,1,00:0C:43:2A:04:BF,00:0C:43:2A:04:BF,00:08:22:24:f1:fb,0'",
+            "HQACmdDBDCStartTX": "iwpriv wlan0 driver 'HQA DBDCStartTX=3,15,0,0,4,0,24,0,0,0,0,0,10,0,1,1,1'",
+            "HQACmdStop": "iwpriv wlan0 driver 'HQA DBDCStopTX=5,1,0'",
+            "nvLoss" : 2,
+            "S98019": {
+              "nvLoss" : 3
+            },
+            "TestRange": {
+              "min": 9.5,
+              "max": 14.5
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.lcdcolor",
+      "Support": true,
+      "IsForeGround": true,
+      "RunAlone": false,
+      "Name": "software_LCDTest",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "1500000",
+      "Parameter": {
+        "interval": 1500
+      }
+    },
+    {
+      "Action": "com.factory.runintestii.subsystemreboot",
+      "Support": true,
+      "IsForeGround": false,
+      "RunAlone": true,
+      "Name": "reboot_subsystemreboot",
+      "ParamOneCycle": 1,
+      "ParameOneCycleTime": "",
+      "Parameter": {}
+    }
+  ]
+}

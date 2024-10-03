@@ -1,0 +1,14 @@
+#add charge_logger service for dump charge message
+service charge_logger /vendor/bin/charge_logger
+    class last_start
+    user system
+    group system system wakelock
+    disabled
+    oneshot
+    seclabel u:r:charge_logger:s0
+
+on post-fs-data
+    mkdir /data/vendor/charge_logger 0775 system system
+
+on property:sys.boot_completed=1
+    start charge_logger

@@ -1,0 +1,24 @@
+{
+  "itemConfig": [
+    {
+      "showName": "TpOpenShort"
+    },
+    {
+      "showName": "LCD",
+      "action": "com.mmigroup.action.LCD",
+      "support": true,
+      "support_autoTest_autopass": false,
+      "paramconfig": {
+        "auto_switch": false,
+        "first_three_delay": 2000,
+        "lcd_pic": [
+          "w255_01=2000",
+          "color_02=2000",
+          "ui_03=2000",
+          "crosstalk_04=2000",
+          "hbm_05=2000"
+        ]
+      }
+    }
+  ]
+}

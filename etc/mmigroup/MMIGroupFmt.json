@@ -1,0 +1,144 @@
+{
+  "itemConfig": [
+    {
+      "showName": "Accelerometer",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_axialresult": true,
+        "support_angle45": false,
+        "support_angleneg45": false,
+        "is_auto_calibrate": false,
+        "support_plus_or_minus_45_degrees_either_pass_through": false,
+        "autoTest": {
+          "support_calibrate": false
+        }
+      }
+    },
+    {
+      "showName": "Gyroscope",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_test": true,
+        "is_auto_calibrate": false
+      }
+    },
+    {
+      "showName": "Magnetic",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_draw": false,
+        "support_test": true,
+        "self_calibrate": false
+      }
+    },
+	{
+      "showName": "Optical",
+      "paramconfig": {
+        "lux_max": 1000,
+        "lux_min": 1,
+        "is_check_range": true,
+        "value_change_in": 1,
+        "check_lux_value": -1
+      }
+    },
+    {
+      "showName": "Battery",
+      "support_autoTest_autopass": true,
+      "paramconfig": {
+        "is_miui_battery": true,
+        "support_afc_charge": false,
+        "support_charge_ic_check": true,
+        "check_usb_is_unplug": false,
+        "is_show_batteryTemperature": true,
+        "support_typec_check": false,
+        "Voltage": {
+          "min": 2500,
+          "max": 4550
+        },
+        "temp": {
+          "min": -20,
+          "max": 800
+        },
+        "ChargerVoltage": {
+          "min": 4600,
+          "max": 4600
+        },
+        "ChargerCurrent": {
+          "min": 3000,
+          "max": 3000
+        },
+        "errorBatteryId": [
+          "Fail",
+          "NULL",
+          "Not found",
+          "Generic_Battery",
+          "BATTERY_NOT_DEFAULT"
+        ]
+      }
+    },
+    {
+      "showName": "fingerprint",
+      "paramconfig": {
+	    "support_enrolTest_quality":false,
+        "support_enrolTest": false,
+        "support_identifyTest": false
+      }
+    },
+    {
+      "showName": "MainCamera",
+      "support_autoTest_autopass": true,
+      "paramconfig": {
+        "auto_takepicture": true
+      }
+    },
+    {
+      "showName": "WideCamera",
+      "support_autoTest_autopass": true,
+      "paramconfig": {
+        "auto_takepicture": true
+      }
+    },
+    {
+      "showName": "MacroCamera",
+      "support_autoTest_autopass": true,
+      "paramconfig": {
+        "auto_takepicture": true
+      }
+    },
+    {
+      "showName": "FrontCamera",
+      "support_autoTest_autopass": true,
+      "paramconfig": {
+        "auto_takepicture": true
+      }
+    },
+    {
+      "showName": "TpOpenShort"
+    },
+	{
+      "showName": "WlanAP",
+      "support_autoTest_autopass": true
+    },
+    {
+      "showName": "BluetoothDevice",
+      "support_autoTest_autopass": true
+    },
+    {
+      "showName": "NoSdcard",
+      "support_background_test": false
+    },
+    {
+      "showName": "NoSIMCard",
+      "support_background_test": false
+    },
+    {
+      "showName": "GPS"
+    },
+    {
+      "showName": "Sar",
+      "paramconfig": {
+        "check_exist_only": true
+      }
+    }
+  ]
+}

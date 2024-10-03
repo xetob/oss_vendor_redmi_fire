@@ -1,0 +1,339 @@
+{
+  "itemConfig": [
+    {
+      "showName": "VersionInfo"
+    },
+    {
+      "showName": "KeyPad"
+    },
+    {
+      "showName": "TouchPal",
+      "paramconfig": {
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "TpOpenShort",
+      "paramconfig": {
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "LCD",
+      "paramconfig": {
+        "auto_switch": true,
+        "first_three_delay": 500,
+        "auto_switch_delay": 500,
+        "lcd_pic": [
+          "1_R255=2000",
+          "2_G255=2000",
+          "3_B255=2000",
+          "4_W255=2000",
+          "5_W064=2000",
+          "6_W00=2000",
+          "7-EdgeWhite=2000",
+          "8-crosstalkW=2000",
+          "9-crosstalkB=2000",
+          "10_W0127=2000",
+          "11-sub1dot=2000",
+          "12-H1line=2000",
+          "gradient=2000",
+          "14-flicker=2000"
+        ]
+      }
+    },
+    {
+      "showName": "LCD_R"
+    },
+    {
+      "showName": "LCD_G"
+    },
+    {
+      "showName": "LCD_B"
+    },
+    {
+      "showName": "LCD_W"
+    },
+    {
+      "showName": "LCD_BL"
+    },
+    {
+      "showName": "Backlight",
+      "action": "com.mmigroup.action.BACKLIGHT",
+      "support": false,
+      "paramconfig": {
+        "brightness": [
+          1,
+          255
+        ]
+      }
+    },
+    {
+      "showName": "Vibrator",
+      "paramconfig": {
+        "is_auto_vibrate": true,
+        "randomVibSupport": false,
+        "shortInterval": [
+          200,
+          200
+        ],
+        "longInterval": [
+          200,
+          1000
+        ],
+        "randomInterval": [
+          6,
+          400,
+          400
+        ]
+      }
+    },
+    {
+      "showName": "MainCamera",
+      "paramconfig": {
+        "cameraId": 0,
+        "support_takepicture": true,
+        "auto_takepicture": true,
+        "is_open_flashLight": false,
+        "support_cameraCheck": true
+      }
+    },
+    {
+      "showName": "FrontCamera",
+      "paramconfig": {
+        "cameraId": 1,
+        "support_takepicture": true,
+        "auto_takepicture": true,
+        "is_open_flashLight": false,
+        "support_cameraCheck": true
+      }
+    },
+    {
+      "showName": "TouchPanel"
+    },
+    {
+      "showName": "OTG"
+    },
+    {
+      "showName": "RTC"
+    },
+    {
+      "showName": "Flashlight"
+    },
+    {
+      "showName": "LED"
+    },
+    {
+      "showName": "LED_R"
+    },
+    {
+      "showName": "LED_G"
+    },
+    {
+      "showName": "LED_B"
+    },
+    {
+      "showName": "LED_RGB"
+    },
+    {
+      "showName": "AirInterfaceTest",
+      "paramconfig": {
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Accelerometer",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_axialresult": true,
+        "support_angle45": false,
+        "support_angleneg45": false,
+        "data_suffix_rate": 1000,
+        "gravity_45_degree_x": -4.9000,
+        "gravity_45_degree_y": 4.9000,
+        "gravity_45_degree_z": 6.9340,
+        "gravity_45_degree_tolerance": 0.71,
+        "gravity_axial_limit": 1.5,
+        "is_auto_calibrate": false,
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Accelerometer_C",
+      "paramconfig": {
+        "support_calibrate": true,
+        "support_axialresult": true,
+        "support_angle45": false,
+        "support_angleneg45": false,
+        "data_suffix_rate": 1000,
+        "gravity_45_degree_x": -4.9000,
+        "gravity_45_degree_y": 4.9000,
+        "gravity_45_degree_z": 6.9340,
+        "gravity_45_degree_tolerance": 0.71,
+        "gravity_axial_limit": 1.5,
+        "is_auto_calibrate": true,
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Gyroscope",
+      "paramconfig": {
+        "support_calibrate": false,
+        "support_test": true,
+        "is_auto_calibrate": false,
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Gyroscope_C",
+      "paramconfig": {
+        "support_calibrate": true,
+        "support_test": true,
+        "is_auto_calibrate": true,
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Proximity"
+    },
+    {
+      "showName": "Magnetic"
+    },
+    {
+      "showName": "Optical",
+      "paramconfig": {
+        "value_change_in": 0
+      }
+    },
+    {
+      "showName": "Optical_c"
+    },
+    {
+      "showName": "Lightleak_c"
+    },
+    {
+      "showName": "Optical_Back_c"
+    },
+    {
+      "showName": "Lightleak_Back_c"
+    },
+    {
+      "showName": "HeadSet",
+      "paramconfig": {
+        "volume_rate": 0.5,
+        "keyCode": [
+          "HEADSETHOOK"
+        ]
+      }
+    },
+    {
+      "showName": "NFC"
+    },
+    {
+      "showName": "fingerprint",
+      "paramconfig": {
+        "return_adb_broadcast_result": true,
+        "needEnrolNum": 93,
+        "support_selfTest": true,
+        "support_checkBoardTest": true,
+        "support_enrolTest": true,
+        "support_identifyTest": false
+      }
+    },
+    {
+      "showName": "SMARTPA"
+    },
+    {
+      "showName": "Infrared"
+    },
+    {
+      "showName": "SdCard",
+      "support_background_test": false
+    },
+    {
+      "showName": "MainSIMCard",
+      "support_background_test": false
+    },
+    {
+      "showName": "SubSIMCard",
+      "support_background_test": false
+    },
+    {
+      "showName": "DualSIMCard",
+      "paramconfig": {
+        "SIM1": true,
+        "SIM2": true,
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Wlan",
+      "support_background_test": false
+    },
+    {
+      "showName": "Bluetooth",
+      "support_background_test": false
+    },
+    {
+      "showName": "GPS",
+      "support_background_test": false
+    },
+    {
+      "showName": "Charge",
+      "action": "com.mmigroup.action.BATTERY",
+      "support": true,
+      "support_background_test": false,
+      "background_Service": "com.factory.mmigroup.item.BatteryService",
+      "paramconfig": {
+        "is_miui_charge": true,
+        "check_usb_is_unplug": true,
+        "Voltage": {
+          "min": 2500,
+          "max": 4500
+        },
+        "temp": {
+          "min": -20,
+          "max": 800
+        },
+        "ChargerVoltage": {
+          "min": 0,
+          "max": 0
+        },
+        "ChargerCurrent": {
+          "min": -12500,
+          "max": -3500
+        }
+      }
+    },
+    {
+      "showName": "Battery"
+    },
+    {
+      "showName": "FM",
+      "support_background_test": false,
+      "background_Service": "com.factory.mmigroup.audioitem.FMBackgroundService",
+      "paramconfig": {
+        "return_adb_broadcast_result": true,
+        "volume_rate": 0.5
+      }
+    },
+    {
+      "showName": "Hall",
+      "paramconfig": {
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Hall2",
+      "paramconfig": {
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Sar_C"
+    },
+    {
+      "showName": "Proximity_C"
+    }
+  ]
+}
