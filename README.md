@@ -2,6 +2,7 @@ This is oss vendor for redmi 12 (xiaomi-fire)
 Support only GSI
 
 changes I made:
+
 -Fixed the problem of sensors that led to soft reboots 
 
 -Deleted miui hyperos files
