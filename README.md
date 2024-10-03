@@ -3,6 +3,7 @@ Support only GSI
 
 changes I made:
 -Fixed the problem of sensors that led to soft reboots 
+
 -Deleted miui hyperos files
 
 How to flash:
